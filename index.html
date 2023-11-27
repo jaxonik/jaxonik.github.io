@@ -1,102 +1,43 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>dsdsd</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-	</head>
-	<body>
-		<header>
-			<h1>Witaj</h1>
-		</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Kariera - [Twoje Imię i Nazwisko]</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Witaj na mojej stronie</h1>
+        <p>Jan Markanicz</p>
+    </header>
 
-		<div class="container">
-			<section id="about">
-				<h2>Test</h2>
-				<p>
-					Zadanie 1 1. Obliczanie skumulowanej liczby osób – dodajemy wszystkie
-					osoby 2. Obliczanie częstości względnej (fi) – ilość osób/suma osób
-					(n) 3. Obliczamy skumulowaną częstość (xi) – dodajemy wszystkie
-					wartości 4. Obliczamy skumulowaną częstość – wynik fi*100% 5. Dodajemy
-					wartość minimalną przedziału 6. Dodajemy wartość maksymalną przedziału
-					7. Obliczamy wartość środkową przedziału (wartość minimalna+wartość
-					maksymalna)/2 8. Obliczamy xi*ni – wartość środkowa * ilość osób (ni)
-					(sumujemy wszystko) 9. Obliczamy rozpiętość przedziału 10. Obliczamy
-					średnią arytmetyczną – suma xi*ni * suma osób (n) 11. Obliczamy xi-śr
-					– wartość środkowa – średnia arytmetyczna 12. Obliczamy (xi-śr)^2 13.
-					Obliczamy (xi-śr)^2*ni (sumujemy wszystko) 14. Obliczamy (xi-śr)^3 15.
-					Obliczamy (xi-śr)^3*ni (sumujemy wszystko) 16. Obliczamy (xi-śr)^4 17.
-					Obliczamy (xi-śr)^4*ni (sumujemy wszystko) 18. Obliczamy pozycję
-					mediany (n+1)/2, patrzymy na skumulowaną ilość i zaznaczamy przedział,
-					w którym mieści się wynik pozycji mediany 19. Obliczamy medianę -
-					wartość minimalna+(poz.mediany-jeden przedział niższy)*(rozpiętość
-					przedziału/ilość osób) – poruszamy się po zaznaczonym obszarze 20.
-					Obliczamy dominantę – wartość minimalna mniejsza od
-					zaznaczonej+(liczba osób mniejsza od zaznaczonej-liczba osób mniejsza
-					od zaznaczonej o 2 komórki)/(( liczba osób mniejsza od
-					zaznaczonej-liczba osób mniejsza od zaznaczonej o 2 komórki)+( liczba
-					osób mniejsza od zaznaczonej-zaznaczona wartość NI))*rozpiętość
-					przedziału mniejszego o 1 komórkę 21. Obliczamy PozQ1 22. Obliczamy Q1
-					- wartość minimalna mniejsza od zaznaczonej+(PozQ1-skumulowana liczba
-					osób 2 komórki wyżej od zaznaczonej)*rozpiętość przedziału wyżej o 1
-					komórkę/ilość osób wyżej o jedną komórkę 23. Obliczamy PozQ3 24.
-					Obliczamy Q3 – wartości minimalna 2 komórki w dół od
-					żółtej+(pozq3-skumulowana ilość osób 1 w dół od żółtej)*rozpiętość
-					przedziału 2 komórki w dół od żółtej/ilość osób dwie komórki w dół od
-					żółtej 25. Obliczamy wariancję, s2 – suma ^2*ni/suma ni 26. Obliczamy
-					odchylenie standardowe – pierwiastek z wariancji - średnia wartość
-					odchyleń od średniej arytmetycznej zaobserwowanych wartości badanej
-					cechy 27. Obliczamy V (s) – (odchylenie standardowe/średnią
-					arytemtyczną)*100% - istotne zróznicowania wartości cechy badanej
-					zbiorowości, zbiorowość skrajnie zróznicowana, odchylenie wartości
-					obserwowanej cechy stanowi XX wartości średniej dla tej cechy 28.
-					Rozstęp – wartość minimalna – wartość maksymalna - maksymalna różnica
-					pomiędzy odległościami występującymi pomiędzy miejscem zamieszkania a
-					miejscem pracy dla całej badanej zbiorowości może wynieść XX 29.
-					Rozstęp kwartałowy – Q3 – Q1 - maksymalna różnica pomiędzy
-					odległościami między miejscem zamieszkania a miejscem pracy w 50%
-					środkowych wartości tych odległości może wynieść maksymalnie XX 30.
-					Odchylenie ćwiartkowe – rozstęp kwartylowy/2 - średnia różnica między
-					wartościami cechy 31. V (Q) – odchylenie ćwiartkowe/mediana - 50%
-					środkowych wartości cechy jest skrajnie zróżnicowana, odległości
-					różniły się od mediany odległości przeciętnie o XX 32. Moment trzeci
-					centralny – suma ^3*ni/suma ni 33. Moment trzeci względny – moment
-					trzeci centralny/odchylenie standardowe^3 34. Współczynnik asymetrii A
-					– (średnia arytmetyczna-dominanta)/odchylenie standardowe – jeśli
-					więcej niż 0,5 dodatnia 35. Moment czwarty centralny – suma ^4*ni/suma
-					ni 36. Moment czwarty względny – moment czwarty centralny/odchylenie
-					standardowe Zadanie 2 1. Obliczanie xiyi – trzeba zrobić xi razy yi 2.
-					X^2 – xi podnosimy do potęgi 2 3. Obliczanie regresji liniowej (b i a)
-					– B - (suma pomiarów*suma xiyi-suma xi*suma yi)/(suma pomiarów*suma
-					x^2-suma xi^2) A – (suma yi-wynik B*suma xi)/suma pomiarów) 4.
-					Obliczanie yteoret – wynik A+wynik B*xi od góry 5. Obliczanie
-					yi-yteoret 6. Obliczanie (yi-teoret)^2 7. Obliczanie se2 – suma
-					(yi-teoret)^2/(suma pomiarów-2) 8. Obliczanie se – pierwiastek z se2
-					9. Obliczanie yśr – średnia yi 10. Obliczanie ve – wynik se/wynik yśr
-					11. Obliczanie yi-yśr 12. Obliczanie yi-yśr^2 13. Obliczanie fi^2 –
-					wynik (yi-yteoret)^2/suma yi-śr^2 14. Obliczanie r^2 – 1-wynik fi^2
-					15. Obliczanie r Pearsona – pierwiastek z r^2 a. 0-0,3 – słaba
-					korelacja b. 0,3-0,5 – umiarkowana korelacja c. 0,5-0,7 – silna
-					korelacja d. 0,7-1 – bardzo silna korelacja Objaśnienia B –
-					współczynnik regresji – pokazuje, jak zmienia się zmienna zależna,
-					jeśli zmienna niezależna zmieni się o jednostkę A – wyraz wolny –
-					wartość zmiennej zależnej przy wartości zmiennej niezależnej=0 Se –
-					informuje, o ile średnio wartości rzeczywiste zmiennej zależnej
-					odchylają się średnio od wartości oszacowanych za pomocą równania Ve –
-					rzeczywista wartość zmiennej zależnej różni się średnio o (wynik SE)
-					co stanowi (wynik VE) średniego poziomu zmiennej zależnej Yśr –
-					średnia YI Fi^2 – Współczynnik indeterminacji – pokazuje, jaka część
-					zmienności zmiennej zależnej nie jest wyjaśniona kształtowaniem się
-					zmiennej niezależnej R^2 – Współczynnik determinacji – pokazuje, jaka
-					część zmienności zmiennej zależnej jest wyjasniona kształtowaniem się
-					zmiennej niezależnej R – Współczynnik r Pearsona służy do sprawdzenia
-					czy dwie zmienne ilościowe są powiązane ze sobą związkiem liniowym
-				</p>
-			</section>
-		</div>
-		<footer>
-			<p>sdsd</p>
-		</footer>
-	</body>
+    <div class="container">
+        <section id="about">
+            <h2>O mnie</h2>
+            <p>
+                Cześć! Jestem studentem drugiego roku ekonomii na Uniwersytecie Gdańskim. Moje zainteresowanie ekonomią i finansami
+                skłoniło mnie do wyboru tej ścieżki edukacyjnej. Chcę się podzielić swoją dotychczasową karierą i osiągnięciami.
+            </p>
+        </section>
+
+        <section id="career">
+            <h2>Dotychczasowa kariera</h2>
+            <p>
+                Przez ostatnie dwa lata studiów na UG zdobyłem wiele cennych doświadczeń. Pracowałem jako asystent na wykładach
+                z makroekonomii i mikroekonomii, co pomogło mi lepiej zrozumieć te zagadnienia. Ponadto, byłem zaangażowany w
+                wolontariat w organizacjach związanych z ekonomią, co pozwoliło mi rozwinąć swoje umiejętności miękkie i
+                nawiązać wartościowe kontakty z profesjonalistami z branży.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>
+                Jeśli chcesz się ze mną skontaktować lub dowiedzieć się więcej o mojej karierze, możesz napisać do mnie
+                pod adresem email: markaniczjan@gmail.com
+            </p>
+        </section>
+    </div>
+</body>
 </html>
