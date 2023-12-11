@@ -3,6 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Strona internetowa Jana Markanicza - studenta ekonomii, zainteresowanego finansami i ekonomią."
+		/>
+		<meta
+			name="keywords"
+			content="Jan Markanicz, ekonomia, finanse, studenci, Uniwersytet Gdański"
+		/>
 		<title>Jan Markanicz | Home</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="shortcut icon" href="janzdj.ico" type="image/x-icon" />
@@ -41,6 +49,53 @@
 				</p>
 			</section>
 
+			<section id="exchange-rates">
+				<h2>Kursy</h2>
+
+				<!-- Skrypt do pobierania kursu USD -->
+				<script>
+					const nbpApiUrl = 'https://api.nbp.pl/api/exchangerates/rates/A/USD';
+
+					fetch(nbpApiUrl)
+						.then((response) => response.json())
+						.then((data) => {
+							const usdRateElement = document.createElement('p');
+							usdRateElement.textContent = `Kurs USD: ${data.rates[0].mid}`;
+							document
+								.getElementById('exchange-rates')
+								.appendChild(usdRateElement);
+						})
+						.catch((error) => {
+							console.error('Błąd podczas pobierania danych z API NBP:', error);
+							const errorElement = document.createElement('p');
+							errorElement.textContent = 'Błąd pobierania kursu';
+							document
+								.getElementById('exchange-rates')
+								.appendChild(errorElement);
+						});
+				</script>
+
+				<!-- Skrypt do pobierania kursu BTC-PLN -->
+				<script>
+					var btcPlnOptions = {
+						method: 'GET',
+						url: 'https://api.zondacrypto.exchange/rest/trading/stats/BTC-PLN',
+						headers: { 'content-type': 'application/json' },
+					};
+
+					request(btcPlnOptions, function (error, response, body) {
+						if (error) throw new Error(error);
+
+						var data = JSON.parse(body);
+						const btcPlnRateElement = document.createElement('p');
+						btcPlnRateElement.textContent = `Kurs BTC-PLN: Highest Rate - ${data.h}, Lowest Rate - ${data.l}, Volume - ${data.v}, Opening Rate - ${data.r24h}`;
+						document
+							.getElementById('exchange-rates')
+							.appendChild(btcPlnRateElement);
+					});
+				</script>
+			</section>
+
 			<section id="contact">
 				<h2>Kontakt</h2>
 				<p>
@@ -50,25 +105,6 @@
 					provident quod quae.
 				</p>
 			</section>
-
-			<!-- Dodany skrypt do pobierania kursu USD -->
-			<script>
-				const nbpApiUrl = 'https://api.nbp.pl/api/exchangerates/rates/A/USD';
-
-				fetch(nbpApiUrl)
-					.then((response) => response.json())
-					.then((data) => {
-						const usdRateElement = document.createElement('p');
-						usdRateElement.textContent = `Kurs USD: ${data.rates[0].mid}`;
-						document.getElementById('contact').appendChild(usdRateElement);
-					})
-					.catch((error) => {
-						console.error('Błąd podczas pobierania danych z API NBP:', error);
-						const errorElement = document.createElement('p');
-						errorElement.textContent = 'Błąd pobierania kursu';
-						document.getElementById('contact').appendChild(errorElement);
-					});
-			</script>
 		</div>
 	</body>
 </html>
